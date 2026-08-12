@@ -1,4 +1,4 @@
-# Alguien siempre llega
+# Help Colombia
 
 Recolección personal de ayuda para familias afectadas por el sismo de magnitud
 7,4 del 10 de agosto de 2026 en Colombia (epicentro a 12 km de San José del
