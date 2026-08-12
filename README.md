@@ -30,7 +30,8 @@ data URI, así que no depende de ninguna red externa.
 
 - Es una recolección **personal**, no la campaña de ninguna organización ni
   entidad oficial. Así lo dice el pie de la página.
-- La fotografía es de archivo (RDNE Stock project, vía
-  [Pexels](https://www.pexels.com/photo/love-people-africa-travel-6647178/)) y
-  no corresponde a la emergencia en Colombia.
+- Las fotografías son de archivo, vía Pexels
+  ([portada](https://www.pexels.com/photo/love-people-africa-travel-6647178/) ·
+  [modal de donación](https://www.pexels.com/photo/7156180/)), y no
+  corresponden a la emergencia en Colombia.
 - Emergencias en Colombia: línea **123**.
