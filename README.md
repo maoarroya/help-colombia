@@ -9,10 +9,12 @@ las cuentas de recaudo, cada una con su icono y botón de copiar.
 
 ## Formas de enviar
 
-| Método | Dónde funciona | Dato               |
-|--------|----------------|--------------------|
-| BreB   | Colombia       | Llave `3008301700` |
-| Bizum  | España         | `673107025`        |
+| Método | Dónde funciona  | Dato                            |
+|--------|-----------------|---------------------------------|
+| BreB   | Colombia        | Llave `3008301700`              |
+| Zelle  | Estados Unidos  | `maospiname@gmail.com`          |
+| PayPal | Internacional   | `carlos.sanchez61090@gmail.com` |
+| Bizum  | España          | `673107025`                     |
 
 ## Cómo verla
 
