@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Recolección personal de ayuda para las familias afectadas por el sismo del 10 de agosto de 2026 en Colombia. Donaciones por BreB y Bizum.">
+<meta name="description" content="Balance oficial del sismo del 10 de agosto de 2026 en Colombia y recolección personal de ayuda para las familias afectadas. Donaciones por BreB y Bizum.">
 <meta name="theme-color" content="#14211B" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#ECEEE5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#EFF1EA" media="(prefers-color-scheme: light)">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Alguien Siempre Llega">
-<meta property="og:description" content="Recolección personal de ayuda para las familias afectadas por el sismo del 10 de agosto de 2026 en Colombia. Donaciones por BreB y Bizum.">
+<meta property="og:description" content="Balance oficial del sismo del 10 de agosto de 2026 en Colombia y recolección personal de ayuda para las familias afectadas. Donaciones por BreB y Bizum.">
 <meta property="og:locale" content="es_CO">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http%3A//www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%A4%9D</text></svg>">
@@ -23,12 +23,13 @@
   --ink:#14211B;
   --ink-2:#33463C;
   --ink-3:#5D7166;
-  --paper:#ECEEE5;
+  --paper:#EFF1EA;
   --paper-2:#E2E6D9;
   --line:#C3CAB6;
-  --gold:#B87708;
-  --gold-bright:#E3A426;
-  --rio:#2C6A60;
+  --aid:#0A9182;
+  --aid-bright:#12A995;
+  --aid-hero:#3FD0B8;
+  --loss:#C13B22;
   --hero-ink:#0B120F;
   --sheet:#111A16;
   --sheet-2:#1A2620;
@@ -44,13 +45,13 @@
   :root:not([data-theme="light"]){
     --ink:#E3E8DC;--ink-2:#B4BFAE;--ink-3:#8A968A;
     --paper:#0D1512;--paper-2:#141E19;--line:#31413A;
-    --gold:#EDB44E;--gold-bright:#F3C468;--rio:#63AC9E;--hero-ink:#070C0A;
+    --aid:#28A894;--aid-bright:#3FC4AE;--aid-hero:#4FDBC3;--loss:#DE6440;--hero-ink:#070C0A;
   }
 }
 :root[data-theme="dark"]{
   --ink:#E3E8DC;--ink-2:#B4BFAE;--ink-3:#8A968A;
   --paper:#0D1512;--paper-2:#141E19;--line:#31413A;
-  --gold:#EDB44E;--gold-bright:#F3C468;--rio:#63AC9E;--hero-ink:#070C0A;
+  --aid:#28A894;--aid-bright:#3FC4AE;--aid-hero:#4FDBC3;--loss:#DE6440;--hero-ink:#070C0A;
 }
 
 *{box-sizing:border-box;}
@@ -61,7 +62,7 @@ body{
   -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
 }
 a{color:inherit;}
-:focus-visible{outline:2.5px solid var(--gold-bright);outline-offset:3px;border-radius:2px;}
+:focus-visible{outline:2.5px solid var(--aid-bright);outline-offset:3px;border-radius:2px;}
 img{max-width:100%;display:block;}
 .shell{width:var(--shell);margin-inline:auto;}
 
@@ -79,24 +80,24 @@ img{max-width:100%;display:block;}
 .hero__photo{
   position:absolute;inset:0;z-index:-3;width:100%;height:100%;
   object-fit:cover;object-position:50% 38%;
-  filter:grayscale(.72) contrast(1.06) brightness(.62);
+  filter:grayscale(.5) contrast(1.05) brightness(.66);
   transform:scale(1.06);animation:settle 2.4s cubic-bezier(.16,.84,.28,1) both;
 }
 .hero__tone{
   position:absolute;inset:0;z-index:-2;
-  background:linear-gradient(196deg,#0B1D19 0%,#123027 46%,#5A4416 78%,#B8862C 100%);
-  mix-blend-mode:color;opacity:.86;
+  background:linear-gradient(196deg,#07211E 0%,#0C3630 42%,#12665C 74%,#2FA795 100%);
+  mix-blend-mode:color;opacity:.7;
 }
 .hero__wash{
   position:absolute;inset:0;z-index:-1;
   background:
-    radial-gradient(120% 70% at 82% 8%, rgba(227,164,38,.34) 0%, rgba(227,164,38,0) 58%),
+    radial-gradient(120% 70% at 82% 8%, rgba(63,208,184,.3) 0%, rgba(63,208,184,0) 58%),
     linear-gradient(180deg, rgba(8,16,13,.62) 0%, rgba(8,16,13,.18) 34%, rgba(8,16,13,.78) 78%, var(--paper) 100%);
 }
 .hero__inner{position:relative;display:flex;flex-direction:column;gap:1.75rem;}
-.hero .label{color:#D9C089;}
+.hero .label{color:#9FD8CC;}
 .hero__eyebrow{display:flex;flex-wrap:wrap;align-items:center;gap:.55rem .9rem;}
-.hero__eyebrow .dot{width:5px;height:5px;border-radius:50%;background:var(--gold-bright);flex:none;}
+.hero__eyebrow .dot{width:5px;height:5px;border-radius:50%;background:var(--aid-hero);flex:none;}
 
 h1{
   font-family:var(--f-display);font-stretch:118%;font-weight:860;
@@ -105,7 +106,7 @@ h1{
 }
 h1 .ln{display:block;overflow:hidden;}
 h1 .ln > span{display:block;}
-h1 .lo{color:var(--gold-bright);font-stretch:100%;font-weight:500;}
+h1 .lo{color:var(--aid-hero);font-stretch:100%;font-weight:500;}
 
 .hero__deck{
   font-size:clamp(1.14rem,1rem + 0.7vw,1.5rem);line-height:1.48;
@@ -122,10 +123,76 @@ h1 .lo{color:var(--gold-bright);font-stretch:100%;font-weight:500;}
   transition:transform .18s ease,background-color .18s ease,box-shadow .18s ease;
 }
 .btn:hover{transform:translateY(-2px);}
-.btn--solid{background:var(--gold-bright);color:#16120A;box-shadow:0 8px 30px -12px rgba(227,164,38,.8);}
-.btn--solid:hover{background:#F6CE73;box-shadow:0 14px 38px -12px rgba(227,164,38,.9);}
+.btn--solid{background:var(--aid-hero);color:#04221D;box-shadow:0 8px 30px -12px rgba(63,208,184,.75);}
+.btn--solid:hover{background:#63E0CA;box-shadow:0 14px 38px -12px rgba(63,208,184,.85);}
 .btn svg{width:1.1em;height:1.1em;flex:none;}
 .hero__hint{font-size:.92rem;color:#B9C2B2;font-style:italic;}
+
+/* ---------- Balance / métricas ---------- */
+.datos{border-bottom:1px solid var(--line);}
+.datos__head{display:flex;flex-direction:column;gap:.7rem;margin-bottom:clamp(2rem,5vw,3rem);}
+.datos__head .rule{height:3px;width:56px;background:var(--loss);}
+.datos__grid{display:grid;gap:clamp(2.25rem,5vw,4rem);grid-template-columns:minmax(0,1fr);align-items:start;}
+@media (min-width:940px){.datos__grid{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);}}
+
+.figura{display:flex;flex-direction:column;gap:.15rem;margin:0 0 2rem;}
+.figura__n{
+  font-family:var(--f-display);font-stretch:104%;font-weight:840;
+  font-size:clamp(4.5rem,3rem + 9vw,9rem);line-height:.82;letter-spacing:-.035em;
+  color:var(--loss);
+}
+.figura__l{
+  font-family:var(--f-display);font-stretch:92%;font-weight:700;
+  font-size:clamp(.92rem,.85rem + .3vw,1.1rem);letter-spacing:.03em;
+  text-transform:uppercase;color:var(--ink);
+}
+
+.kpis{display:grid;gap:1.25rem 1.75rem;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));}
+.kpi{display:flex;flex-direction:column;gap:.1rem;border-top:1px solid var(--line);padding-top:.75rem;}
+.kpi__n{
+  font-family:var(--f-display);font-stretch:100%;font-weight:800;
+  font-size:clamp(1.75rem,1.2rem + 1.9vw,2.5rem);line-height:1;letter-spacing:-.022em;color:var(--ink);
+}
+.kpi__l{font-size:.9rem;line-height:1.3;color:var(--ink-2);}
+
+/* Gráfico de barras: una serie, un tono, etiquetas directas */
+.chart{margin:0;}
+.bars{width:100%;border-collapse:collapse;}
+.bars caption{
+  font-family:var(--f-display);font-stretch:92%;font-weight:700;
+  font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);
+  text-align:left;padding-bottom:1.1rem;
+}
+.bars tr + tr > *{padding-top:.9rem;}
+.bars th{
+  text-align:left;font-family:var(--f-body);font-weight:500;font-size:1rem;
+  color:var(--ink);white-space:nowrap;padding-right:1rem;vertical-align:middle;
+}
+.bars td.plot{width:100%;vertical-align:middle;}
+.bars td.num{
+  font-family:var(--f-display);font-stretch:96%;font-weight:730;font-size:1.05rem;
+  color:var(--ink);font-variant-numeric:tabular-nums;text-align:right;
+  padding-left:.85rem;vertical-align:middle;white-space:nowrap;
+}
+.bar{
+  display:block;height:20px;width:var(--w);min-width:3px;
+  background:var(--loss);border-radius:0 4px 4px 0;
+  transform-origin:left center;
+  transition:filter .16s ease;
+}
+.bars tr:hover .bar{filter:brightness(1.12);}
+.bars tbody tr:hover th,.bars tbody tr:hover td.num{color:var(--loss);}
+.chart__foot{margin-top:1.1rem;font-size:.85rem;color:var(--ink-3);line-height:1.5;}
+
+.datos__block{margin-top:clamp(2.5rem,5vw,3.5rem);}
+.datos__block h3{
+  font-family:var(--f-display);font-stretch:100%;font-weight:760;
+  font-size:1rem;letter-spacing:.02em;margin:0 0 1.25rem;color:var(--ink);
+}
+.fuente{
+  margin-top:clamp(2rem,4vw,2.75rem);padding-top:1.15rem;border-top:1px solid var(--line);
+  font-size:.85rem;line-height:1.55;color:var(--ink-3);max-width:74ch;
+}
 
 /* ---------- Secciones ---------- */
 section{padding-block:clamp(3.25rem,8vw,5.5rem);}
@@ -151,7 +218,7 @@ p:last-child{margin-bottom:0;}
 }
 .voz--xl p{font-size:clamp(1.85rem,1.1rem + 3.2vw,3.4rem);}
 .voz--lg p{font-size:clamp(1.4rem,1rem + 1.8vw,2.15rem);}
-.voz--gold p{color:var(--gold);}
+.voz--aid p{color:var(--aid);}
 .voz--rule{border-top:2px solid var(--ink);padding-top:1.15rem;}
 @media (min-width:820px){
   .voz--a{grid-column:1 / span 9;}
@@ -163,8 +230,8 @@ p:last-child{margin-bottom:0;}
 .cierre{background:var(--ink);color:var(--paper);}
 .cierre h2{color:var(--paper);}
 .cierre p{color:color-mix(in srgb,var(--paper) 76%,transparent);}
-.cierre .label{color:var(--gold-bright);}
-.cierre .rule{height:2px;width:56px;background:var(--gold-bright);margin-bottom:1.25rem;}
+.cierre .label{color:var(--aid-hero);}
+.cierre .rule{height:2px;width:56px;background:var(--aid-hero);margin-bottom:1.25rem;}
 .cierre__inner{display:flex;flex-direction:column;gap:1.75rem;align-items:flex-start;}
 
 /* ---------- MODAL ---------- */
@@ -175,7 +242,7 @@ dialog.modal{
 dialog.modal::backdrop{background:rgba(6,11,9,.78);backdrop-filter:blur(5px);}
 .sheet{
   background:var(--sheet);border:1px solid var(--sheet-line);
-  border-top:3px solid var(--gold-bright);
+  border-top:3px solid var(--aid-hero);
   box-shadow:0 40px 90px -28px rgba(0,0,0,.85);
   display:flex;flex-direction:column;
   max-height:min(88svh,860px);
@@ -236,9 +303,9 @@ dialog.modal::backdrop{background:rgba(6,11,9,.78);backdrop-filter:blur(5px);}
   display:inline-flex;align-items:center;gap:.4rem;
   transition:background-color .16s ease,border-color .16s ease,color .16s ease;
 }
-.copy:hover{border-color:var(--gold-bright);color:var(--gold-bright);}
+.copy:hover{border-color:var(--aid-hero);color:var(--aid-hero);}
 .copy svg{width:.85rem;height:.85rem;}
-.copy.ok{background:rgba(227,164,38,.16);border-color:var(--gold-bright);color:var(--gold-bright);}
+.copy.ok{background:rgba(63,208,184,.16);border-color:var(--aid-hero);color:var(--aid-hero);}
 @media (max-width:520px){
   .m{
     grid-template-columns:2.85rem minmax(0,1fr);
@@ -255,7 +322,7 @@ footer{
 }
 footer p{max-width:76ch;}
 footer a{color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--line);}
-footer a:hover{color:var(--gold);border-color:var(--gold);}
+footer a:hover{color:var(--aid);border-color:var(--aid);}
 
 /* ---------- Movimiento ---------- */
 @keyframes settle{from{transform:scale(1.14);opacity:.35;}to{transform:scale(1.06);opacity:1;}}
@@ -308,6 +375,67 @@ dialog.modal[open] .sheet{animation:sheetIn .34s cubic-bezier(.2,.8,.24,1) both;
   </div>
 </header>
 
+<section class="datos">
+  <div class="shell rv">
+    <div class="datos__head">
+      <span class="rule" aria-hidden="true"></span>
+      <span class="label">Balance oficial UNGRD · 11 de agosto de 2026, 9:30 a.&nbsp;m.</span>
+      <h2>Esto es lo que dejó el sismo</h2>
+    </div>
+
+    <div class="datos__grid">
+      <div>
+        <p class="figura">
+          <span class="figura__n">181</span>
+          <span class="figura__l">personas fallecidas</span>
+        </p>
+        <div class="kpis">
+          <div class="kpi"><span class="kpi__n">195</span><span class="kpi__l">desaparecidas</span></div>
+          <div class="kpi"><span class="kpi__n">2.595</span><span class="kpi__l">heridas</span></div>
+          <div class="kpi"><span class="kpi__n">35</span><span class="kpi__l">rescatadas con vida</span></div>
+        </div>
+      </div>
+
+      <figure class="chart">
+        <table class="bars">
+          <caption>Fallecidos por departamento</caption>
+          <tbody>
+            <tr>
+              <th scope="row">Valle del Cauca</th>
+              <td class="plot"><span class="bar" style="--w:100%"></span></td>
+              <td class="num">90</td>
+            </tr>
+            <tr>
+              <th scope="row">Risaralda</th>
+              <td class="plot"><span class="bar" style="--w:77.8%"></span></td>
+              <td class="num">70</td>
+            </tr>
+            <tr>
+              <th scope="row">Chocó</th>
+              <td class="plot"><span class="bar" style="--w:15.6%"></span></td>
+              <td class="num">14</td>
+            </tr>
+          </tbody>
+        </table>
+        <figcaption class="chart__foot">Las ciudades con mayor afectación son Cali, Pereira, Quibdó, Manizales y Armenia. El epicentro estuvo a 12&nbsp;km de San José del Palmar, Chocó, a 103&nbsp;km de profundidad; desde entonces se han registrado 96 réplicas.</figcaption>
+      </figure>
+    </div>
+
+    <div class="datos__block">
+      <h3>Y las que se quedaron sin nada</h3>
+      <div class="kpis">
+        <div class="kpi"><span class="kpi__n">1.136</span><span class="kpi__l">viviendas destruidas</span></div>
+        <div class="kpi"><span class="kpi__n">8.357</span><span class="kpi__l">viviendas averiadas</span></div>
+        <div class="kpi"><span class="kpi__n">807</span><span class="kpi__l">colegios afectados</span></div>
+        <div class="kpi"><span class="kpi__n">85</span><span class="kpi__l">centros de salud afectados</span></div>
+        <div class="kpi"><span class="kpi__n">74</span><span class="kpi__l">vías afectadas</span></div>
+      </div>
+    </div>
+
+    <p class="fuente">Detrás de cada una de esas 9.493 viviendas hay una familia que hoy duerme en otra parte. Cifras del reporte oficial de la Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD) con corte a las 9:30&nbsp;a.&nbsp;m. del 11 de agosto de 2026. Son preliminares y siguen subiendo: la evaluación de daños y necesidades continúa en terreno.</p>
+  </div>
+</section>
+
 <section class="intro">
   <div class="shell rv">
     <span class="rule" aria-hidden="true"></span>
@@ -321,7 +449,7 @@ dialog.modal[open] .sheet{animation:sheetIn .34s cubic-bezier(.2,.8,.24,1) both;
       <blockquote class="voz voz--xl voz--a voz--rule rv">
         <p>Un país no se mide por lo que se le cae encima, sino por lo rápido que se agacha a levantar al vecino.</p>
       </blockquote>
-      <blockquote class="voz voz--lg voz--b voz--gold rv">
+      <blockquote class="voz voz--lg voz--b voz--aid rv">
         <p>No hay donación pequeña. Hay familias que van a comer esta semana por un aporte que a usted le pareció poca cosa.</p>
       </blockquote>
       <blockquote class="voz voz--xl voz--c voz--rule rv">
